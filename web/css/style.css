@@ -16,7 +16,7 @@ tr:hover td{
 }
 
 /* The CSS */
-select {
+select.new-select-style {
     padding:3px;
     margin: 0;
     -webkit-border-radius:4px;
@@ -39,4 +39,38 @@ select {
 /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     select {padding-right:18px}
+}
+
+
+label, form input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+/* The label is looking good now. Onto the input field! */
+
+/*
+Everything is broken now! But we can fix it. Lets see how.
+*/
+input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #d4d4d4;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 4px;
+
+    line-height: 1.5em;
+    float: right;
+
+    /* some box shadow sauce :D */
+    box-shadow: inset 0px 2px 2px #ececec;
+}
+input:focus {
+    /* No outline on focus */
+    outline: 0;
+    /* a darker border ? */
+    border: 1px solid #bbb;
 }
